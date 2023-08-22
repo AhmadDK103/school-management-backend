@@ -22,7 +22,6 @@ const responses = {
       TOKEN_NOT_PROVIDED: "Token not provided.",
       INVALID_TOKEN: "Invalid token."
     },
-    
     genericResponse: (status, success, data = null, error = null, message = null) => {
       return {
         status: {
