@@ -10,6 +10,7 @@ const marksheet_routes = require('./routes/marksheet')
 const attendance_routes = require('./routes/attendance')
 const teacher_routes = require('./routes/teacher');
 const student_routes = require('./routes/student')
+const quiz_routes = require('./routes/quiz')
 app.use(cors({ origin: '*' }));
 
 app.get('/', (req, res) => {
@@ -19,17 +20,18 @@ app.get('/', (req, res) => {
 
 // middleware or set to router
 
-app.use('/api/auth',auth_routes)
-app.use('/api/products',products_routes)
-app.use('/api/marksheets',marksheet_routes)
-app.use('/api/attendance' ,attendance_routes)
-app.use('/api/teacher',teacher_routes)
-app.use('/api/student',student_routes)
+app.use('/api/auth', auth_routes)
+app.use('/api/products', products_routes)
+app.use('/api/marksheets', marksheet_routes)
+app.use('/api/attendance', attendance_routes)
+app.use('/api/teacher', teacher_routes)
+app.use('/api/student', student_routes)
+app.use('/api/quiz',quiz_routes)
 
 
 const start = async () => {
     try {
-        app.listen(PORT,()=>{
+        app.listen(PORT, () => {
             console.log(`${PORT} Yes i am connected`)
         })
     } catch (err) {
