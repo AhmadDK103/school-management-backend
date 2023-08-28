@@ -14,7 +14,6 @@ const getAllQuizByClass = async (req, res) => {
                 null,
                 ENTITY_RESPONSES.NOT_FOUND
             )
-
             return res.status(response.status.code).json(response)
         } else {
             const quizArra = quiz.map((i) => {
